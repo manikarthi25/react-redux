@@ -9,7 +9,7 @@ const applyMiddleware = redux.applyMiddleware;
 console.log("Node - Redux");
 
 const BUY_CAKE = 'BUY_CAKE';
-const BUY_ICEGREAM = 'BUY_ICEGREAM';
+const BUY_ICECREAM = 'BUY_ICECREAM';
 
 //Create Action
 function buyCake() {
@@ -18,9 +18,9 @@ function buyCake() {
     }
 }
 
-const buyIceGream = () => {
+const buyIceCream = () => {
     return{
-        type:BUY_ICEGREAM
+        type:BUY_ICECREAM
     }
 }
 
@@ -29,11 +29,11 @@ const cakeShopInitialState = {
 }
 
 
-const iceGreamInitialState = {
-    noOfIceGreams: 5
+const iceCreamInitialState = {
+    noOfIceCreams: 5
 }
 console.log(cakeShopInitialState);
-console.log(iceGreamInitialState);
+console.log(iceCreamInitialState);
 
 //Create Reducer
 const cakeShopReducer = (state = cakeShopInitialState, action) => {
@@ -47,12 +47,12 @@ const cakeShopReducer = (state = cakeShopInitialState, action) => {
             return state;
     }
 }
-const iceGreamShopReducer= (state = iceGreamInitialState, action) => {
+const iceCreamShopReducer= (state = iceCreamInitialState, action) => {
     switch(action.type) {
-        case BUY_ICEGREAM:
+        case BUY_ICECREAM:
             return {
                 ...state,
-                noOfIceGream: state.noOfIceGream - 1
+                noOfIceCream: state.noOfIceCream - 1
             } 
         default:
             return state;
@@ -61,7 +61,7 @@ const iceGreamShopReducer= (state = iceGreamInitialState, action) => {
 
 const rootReducers = combineReducers({
     cakeShop : cakeShopReducer,
-    iceGream : iceGreamShopReducer
+    iceCream : iceCreamShopReducer
 });
 
 //Create Store
@@ -70,5 +70,5 @@ console.log("Initial State :" +store.getState())
 const unsubscribe = store.subscribe(() => console.log("Update State :" +store.getState()))
 
 store.dispatch(buyCake);
-store.dispatch(buyIceGream);
+store.dispatch(buyIceCream);
 unsubscribe()
