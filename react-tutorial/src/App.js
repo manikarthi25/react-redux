@@ -16,6 +16,10 @@ import FragmentTable from './components/FragmentTable';
 import PureComponentDemo from './components/PureComponentDemo';
 import ParentMemoCompDemo from './components/ParentMemoCompDemo';
 import RefDemo from './components/RefDemo';
+import ForwardRefParent from './components/ForwardRefParent';
+import PortalDemo from './components/PortalDemo';
+import Company from './components/Company';
+import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
   return (
@@ -86,6 +90,23 @@ function App() {
       <hr/>
       <h1>Ref Usage</h1>
       <RefDemo/>
+
+      <hr/>
+      <h1>Forward Ref Usage</h1>
+      <ForwardRefParent/>
+
+      <hr/>
+      <h1>Portal Usage</h1>
+      <PortalDemo/>
+
+      <hr/>
+      <h1>Error Boundary</h1>
+      <ErrorBoundary>
+        <Company companyName = "Wipro"/>
+        <Company companyName = "HCL"/>
+        <Company companyName = "CTS"/>
+      </ErrorBoundary>
+
     </div>
   );
 }

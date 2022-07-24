@@ -217,6 +217,24 @@
      -> this.inputRef.current.focus()
      -> this.inputRef.current.value
 
+# ForwardRef
+   - Forward ref from parent to child component
+   - React.forwardRef((props, ref) => {})
+
+# portal
+   - Generally all component display under root
+   - We can display some component under other than root with help of portal
+   - ReactDOM.createPortal
+
+# Error Boundary 
+   - Lifecycle Methods 
+     1. getDerviedStateFromError 
+        - render a fallback UI after an error is thrown
+     2. componentDidCatch
+        - Log the error information
+  
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
