@@ -166,25 +166,46 @@
                           => static getDerviedStateFromError
                           => componentDidCatch
  
-           
+# Fragment  
+   - To avoid unwanted node(HTML tag - H1, DIV etc) insert into DOM
+   - <React.Fragment></<React.Fragment>> -> We can use key when iterating the value from the list or array of values
+   - <></> -> We can not use key when iterating the value from the list or array of values
+   - see the deifference in inpect - element(browser dev tools)
 
+# Pure Component vs Regular ComponentS
+  1. Pure Comonent - class based component
+    - When parent component rerender, Pure component wont be rerender again when pure component is child component of parent     
+      component. Pure component render only one time
+    - Pure Component implements shouldComponentUpdate with shallow prop and state comparsion
+      -> SC prevProps with crrentProps =====> difference ===== Rerender Pure Component
+      -> SC prevState with crrentState =====> difference ===== Rerender Pure Component
+    - improve performance
 
+  2. Regular Comonent
+    - When parent component rerender, regular component rerender again and again when regular component is child component of  
+      parent component. Regular component render more than one time
+    - Regular Component does not implement shouldComponentUpdate. It always return true only
 
+# Shallow Comparsion -SC
+  1. Primitive Types
+    - a (SC) b returns true if a and b have same value and same type
+    - Example
+      String a = "mani"
+      String b = "mani"
 
+  2. Complex Types
+    - a (SC) b returns true if a and b reference the exact same object
+    - Example
+      var a = [1,2,3]
+      var b = [1,2,3]
+      var c = a;
+      a === b ----> return false -> different reference and same value
+      a === c ----> return true  -> same reference and same value
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Memo Component
+   - Avoid unwanted rerender(Child Component) when props not changed
+   - export default React.memo(MemoComp)
+   
 
 
 # Getting Started with Create React App

@@ -11,6 +11,10 @@ import Stylesheet from './components/Stylesheet';
 import ConditionalRendering from './components/ConditionalRendering';
 import FormHandling from './components/FormHandling';
 import LifeCycleA from './components/LifeCycleA';
+import FragmentDemo from './components/FragmentDemo';
+import FragmentTable from './components/FragmentTable';
+import PureComponentDemo from './components/PureComponentDemo';
+import ParentMemoCompDemo from './components/ParentMemoCompDemo';
 
 function App() {
   return (
@@ -65,6 +69,19 @@ function App() {
       <h1>Life cycle Methods</h1>
       <LifeCycleA/>
 
+      <hr/>
+      <h1>Fragment</h1>
+      <FragmentDemo/>
+      <FragmentTable/>
+
+      <hr/>
+      <h1>Pure Component</h1>
+      <PureComponentDemo/>
+
+      <hr/>
+      <h1>Memo Component</h1>
+      <ParentMemoCompDemo/>
+      
     </div>
   );
 }

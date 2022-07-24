@@ -40,4 +40,4 @@ export class LifeCycleB extends Component {
   }
 }
 
-export default LifeCycleB
+export default LifeCycleB;

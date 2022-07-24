@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { LifeCycleB } from './LifeCycleB';
 
-export class LifeCycleA extends Component {
+class LifeCycleA extends Component {
     
     constructor(props) {
         super(props);
@@ -53,4 +53,4 @@ export class LifeCycleA extends Component {
   }
 }
 
-export default LifeCycleA
+export default LifeCycleA;
