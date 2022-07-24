@@ -94,7 +94,19 @@
      - In functional component -> useState() using hooks
      - In class component -> this.state.name
 
-   
+# map and list
+     - unique key -> key
+
+# Rendering based on condition 
+     - based on condition redering the message
+# Stylesheet
+    - CSS stylesheet
+    - Inline styling
+    - module styesheet
+    - CSS in JS Libraray
+
+# Form Handling
+    
  
            
 

@@ -18,7 +18,9 @@ class ClassState extends Component {
     render() {
         return (
             <div>
-               <h1>{this.state.message}</h1>
+               <hr/>
+               <h1>State usage in Class Component</h1>
+               <h3>{this.state.message}</h3>
                <button onClick={() => this.subscribeHandler()}>Subscribe</button>
             </div>
         );
