@@ -206,7 +206,16 @@
    - Avoid unwanted rerender(Child Component) when props not changed
    - export default React.memo(MemoComp)
    
-
+# Ref
+   - cursor focus when page is loading
+   - ref can pass to parent component which should be class component
+   - ref can not pass to parent component which is in fuctional component 
+   - Example
+     -> When page is loading, cursor come to input text box
+     -> this.inputRef = React.createRef()
+     -> <input type = "text" ref = {this.inputRef} />
+     -> this.inputRef.current.focus()
+     -> this.inputRef.current.value
 
 # Getting Started with Create React App
 

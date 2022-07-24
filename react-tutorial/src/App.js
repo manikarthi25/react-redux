@@ -15,6 +15,7 @@ import FragmentDemo from './components/FragmentDemo';
 import FragmentTable from './components/FragmentTable';
 import PureComponentDemo from './components/PureComponentDemo';
 import ParentMemoCompDemo from './components/ParentMemoCompDemo';
+import RefDemo from './components/RefDemo';
 
 function App() {
   return (
@@ -82,6 +83,9 @@ function App() {
       <h1>Memo Component</h1>
       <ParentMemoCompDemo/>
       
+      <hr/>
+      <h1>Ref Usage</h1>
+      <RefDemo/>
     </div>
   );
 }
