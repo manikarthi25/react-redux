@@ -4,8 +4,7 @@ class ClassEx extends Component {
     render() {
         return(
             <div>
-                <hr/>
-                <h1>Class Component</h1>
+                <h3>Class Component</h3>
             </div>
         )
     }

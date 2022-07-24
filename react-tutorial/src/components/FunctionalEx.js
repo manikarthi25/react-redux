@@ -3,8 +3,7 @@ import React from 'react';
 const FunctionalEx = () => {
     return(
         <div>
-            <hr/>
-            <h1>Functional Component</h1>
+            <h3>Functional Component</h3>
         </div>
     )
 }

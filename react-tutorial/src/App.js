@@ -10,24 +10,39 @@ import UserList from './components/UserList';
 import Stylesheet from './components/Stylesheet';
 import ConditionalRendering from './components/ConditionalRendering';
 import FormHandling from './components/FormHandling';
+import LifeCycleA from './components/LifeCycleA';
 
 function App() {
   return (
     <div className="App">
+      <h1>Java Script XML</h1>
       <JSXEx/>
-      <ClassEx/>
-      <FunctionalEx/>
+
       <hr/>
+      <h1>Class Component</h1>
+      <ClassEx/>
+
+      <hr/>
+      <h1>Functional Component</h1>
+      <FunctionalEx/>
+
+      <hr/>
+      <h1>Functional Component with Props</h1>
       <FunctionalProps name = "mani"/>
-      <FunctionalProps name = "Mahith">
-        
+      <FunctionalProps name = "Mahith">        
       </FunctionalProps>
       <FunctionalProps name = "Mohith"/>
-      <FunctionalEx/>
+      
+      <hr/>
+      <h1>Class Component with State</h1>
       <ClassState/>
+
+      <hr/>
+      <h1>Callback Function in setState Method</h1>
       <CallbackFunction/>
 
       <hr/>
+      <h1>Parent and Child Component</h1>
       <ParentComponent colorName={true} />
 
       <hr/>
@@ -46,6 +61,9 @@ function App() {
       <h1>Form Handling</h1>
       <FormHandling/>
 
+      <hr/>
+      <h1>Life cycle Methods</h1>
+      <LifeCycleA/>
 
     </div>
   );

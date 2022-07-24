@@ -41,8 +41,6 @@ class CallbackFunction extends Component {
     render() {
         return (
             <div>
-                <hr/>
-                <h1>callback function</h1>
                 <h3>{this.state.count}</h3>
                 <button onClick={() => this.fiveTimesIncrement()}>INCREMENT</button>
             </div>

@@ -106,7 +106,65 @@
     - CSS in JS Libraray
 
 # Form Handling
-    
+    example
+      1. this.state = {
+            userName:'',
+            address:'',
+            games:'cricket'
+        }
+        this.userNameChangeHandler = this.userNameChangeHandler.bind(this)
+
+      2.  <input type = "text" value = {this.state.userName} onChange = {this.userNameChangeHandler} />
+
+      3. userNameChangeHandler = (event) => {
+         this.setState({
+            userName : event.target.value
+           })
+        }
+# Lifecylce Method
+  1. Mounting        -> When instance component is being created and inserted into DOM
+                     -> methods
+                          => Constructor
+                          => static getDerviedStateFromProps
+                          => render
+                          => ComponentDidMount -> It call only one times 
+                     -> Example
+                          LifeCycleA - constructor
+                          LifeCycleA - getDerivedStateFromProps
+                          LifeCycleA - render
+                          LifeCycleB - constructor
+                          LifeCycleB - getDerivedStateFromProps
+                          LifeCycleB - render
+                          LifeCycleB - componentDidMount
+                          LifeCycleA - componentDidMount
+
+  2. Updating        -> When component is being rerendered 
+                     -> methods
+                          => static getDerviedStateFromProps
+                          => shouldComponentUpdate
+                          => render
+                          => getSnapshotBeforeUpdate
+                          => componentDidUpdate
+                     -> Example
+                          LifeCycleA - getDerivedStateFromProps
+                          LifeCycleA - shouldComponentUpdate
+                          LifeCycleA - render
+                          LifeCycleB - getDerivedStateFromProps
+                          LifeCycleB - shouldComponentUpdate
+                          LifeCycleB - render
+                          LifeCycleB - getSnapshotBeforeUpdate
+                          LifeCycleA - getSnapshotBeforeUpdate
+                          LifeCycleB - componentDidUpdate
+                          LifeCycleA - componentDidUpdate
+
+  3. UnMounting      -> When component is being unmount or removedfrom DOM, Never rerender
+                     -> method
+                          => componentWillUnmount
+  
+  4. Error handling  -> When errod is coming during component handling
+                     -> method
+                          => static getDerviedStateFromError
+                          => componentDidCatch
  
            
 
